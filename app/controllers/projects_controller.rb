@@ -14,7 +14,8 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
-    @project = Project.new
+    @skill = Skill.find(params[:skill_id])
+    @project = @skill.projects.new
   end
 
   # GET /projects/1/edit
@@ -24,7 +25,8 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
-    @project = Project.new(project_params)
+    @skill = Skill.find(params[:skill_id])
+    @project = @skill.projects.new(project_params)
 
     respond_to do |format|
       if @project.save
