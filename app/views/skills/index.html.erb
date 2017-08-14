@@ -11,6 +11,7 @@
 
   <tbody>
     <% @skills.each do |skill| %>
+    <%= skill.name %>
       <tr>
         <td><%= link_to 'Show', skill %></td>
         <td><%= link_to 'Edit', edit_skill_path(skill) %></td>
