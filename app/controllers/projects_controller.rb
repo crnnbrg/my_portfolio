@@ -4,6 +4,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
+    @skill = Skill.find(params[:skill_id])
     @projects = Project.all
   end
 

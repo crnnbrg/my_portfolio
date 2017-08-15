@@ -1,4 +1,11 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <%= @project.name %>
+  <%= image_tag @project.picture_url.to_s %>
+  <%= link_to @project.link %>
+  <%= @project.description %>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+</div>
+
+<%= link_to 'Edit', edit_skill_project_path(@project) %> |
+<%= link_to 'Back', skill_path %>
