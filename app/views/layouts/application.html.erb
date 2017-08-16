@@ -9,6 +9,42 @@
   </head>
 
   <body>
+    <nav id="main-nav" class="navbar navbar-default navbar-fixed-top affix-top" data-spy="affix">
+       <div class="container-fluid">
+         <div class="navbar-header">
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-nav" aria-hidden="">
+             <span class="sr-only">Toggle navigation</span>
+             <span class="glyphicon glyphicon-menu-hamburger"><span>
+           </button>
+           <a class="navbar-brand page-scroll" href="/">Betty Mutai</a>
+         </div> <!-- navbar-header -->
+         <div id="menu-nav" class="navbar-collapse collapse">
+           <ul class="nav navbar-nav navbar-right">
+             <li>
+               <a class="page-scroll" href="#about">About</a>
+             </li>
+             <li>
+               <a class="page-scroll" href="#skills">Skills</a>
+             </li>
+             <li>
+               <a class="page-scroll" href="#projects">Projects</a>
+             </li>
+             <li>
+               <a class="page-scroll" href="/blogs">Blog</a>
+             </li>
+           </ul>
+         </div> <!-- navbar-collapse -->
+       </div> <!-- container-fluid -->
+     </nav>
     <%= yield %>
+    <footer class="footer">
+   <div class="container">
+     <div class="row">
+       <div class="col-sm-12">
+         Copyright &copy; Betty Mutai 2017.
+       </div>
+     </div>
+   </div>
+ </footer>
   </body>
 </html>
