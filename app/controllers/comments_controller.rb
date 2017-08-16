@@ -14,7 +14,8 @@ class CommentsController < ApplicationController
 
   # GET /comments/new
   def new
-    @comment = Comment.new(post_id: params[:post_id])
+    @post = current_user.posts.find(params[:post_id])
+    @comment = @post.comments.new
   end
 
   # GET /comments/1/edit
@@ -24,11 +25,12 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    @comment = Comment.new(comment_params)
+    @post = current_user.posts.find(params[:post_id])
+    @comment = @post.comments.new(comment_params)
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+        format.html { redirect_to @post, notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class CommentsController < ApplicationController
   def update
     respond_to do |format|
       if @comment.update(comment_params)
-        format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
+        format.html { redirect_to @post, notice: 'Comment was successfully updated.' }
         format.json { render :show, status: :ok, location: @comment }
       else
         format.html { render :edit }
@@ -65,6 +67,12 @@ class CommentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
       @comment = Comment.find(params[:id])
+    end
+    def set_user
+      @user = User.find(params[:user_id])
+    end
+    def set_post
+      @post = Post.find(params[:post_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
