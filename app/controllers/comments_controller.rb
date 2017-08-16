@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
 
   # GET /comments/new
   def new
-    @post = current_user.posts.find(params[:post_id])
+    @post = Post.find(params[:post_id])
     @comment = @post.comments.new
   end
 
@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    @post = current_user.posts.find(params[:post_id])
+    @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
 
     respond_to do |format|
