@@ -11,22 +11,21 @@
 </p>
 <% if @post.comments.any? %>
 <h4>Comments</h4>
-<ol>
   <% @post.comments.each do |comment| %>
-  <tr>
-    <td><%= comment.content %></td>
-    <td><%= link_to 'Show', comment %></td>
-    <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-    <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <p><%= comment.content %></p>
   <% end %>
-</ol>
 <% else %>
 <p>No comments yet!</p>
 <% end %>
+<br>
+<h4>Add a comment</h4>
+<%= form_for :comment, url: post_comments_path(@post) do |form| %>
+<div class="field">
+  <%= form.label :content %>
+  <%= form.text_area :content, id: :comment_content %>
+</div>
 
-<%= link_to 'New Comment', new_comment_path(post_id: @post.id) %>
-
-<%= link_to 'Edit', edit_post_comment_path(@post) %>
-|
-<%= link_to 'Back', posts_path %>
+<div class="actions">
+  <%= form.submit %>
+</div>
+<% end %>

@@ -1,18 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Projects</h1>
-
 <% @projects.each do |project| %>
-  <%=  project.name %>
-  <%= image_tag project.picture_url.to_s %>
+  <h4><%=  project.name %></h4>
+  <%= image_tag project.picture_url.to_s, class: 'image' %>
   <p><%= link_to project.link %></p>
   <p><%= project.description %></p>
-
-<%= link_to 'Edit', edit_skill_project_path(@skill, project) %>
-<%= link_to 'Destroy', skill_project_path(@skill, project), method: :delete, data: { confirm: 'Are you sure?' } %>
-<%= link_to 'Back', skills_path %>
 <% end %>
-
-<br>
-
-<%= link_to 'New Project', new_skill_project_path %>
