@@ -2,23 +2,16 @@
 
 <h1>Projects</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<% @projects.each do |project| %>
+  <%=  project.name %>
+  <%= image_tag project.picture_url.to_s %>
+  <p><%= link_to project.link %></p>
+  <p><%= project.description %></p>
 
-  <tbody>
-    <% @projects.each do |project| %>
-    <%= link_to project.name, skill_project_path(@skill, project) %>
-      <tr>
-        <td><%= link_to 'Edit', edit_skill_project_path(@skill, project) %></td>
-        <td><%= link_to 'Destroy', skill_project_path(@skill, project), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= link_to 'Edit', edit_skill_project_path(@skill, project) %>
+<%= link_to 'Destroy', skill_project_path(@skill, project), method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Back', skills_path %>
+<% end %>
 
 <br>
 
