@@ -25,8 +25,11 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
+    user = {user_id:current_user.id}
+    par = comment_params.merge(user)
+    # @post = Post.new(par)
     @post = Post.find(params[:post_id])
-    @comment = @post.comments.new(comment_params)
+    @comment = @post.comments.new(par)
 
     respond_to do |format|
       if @comment.save
@@ -67,12 +70,6 @@ class CommentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
       @comment = Comment.find(params[:id])
-    end
-    def set_user
-      @user = User.find(params[:user_id])
-    end
-    def set_post
-      @post = Post.find(params[:post_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
