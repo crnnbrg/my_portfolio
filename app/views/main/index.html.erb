@@ -37,7 +37,7 @@
       <h2>Projects</h2>
       <hr>
       <ul>
-        <% @projects.each do |project| %>
+        <% @skill.projects.each do |project| %>
         <li><%= link_to project.name, project_path(project) %></li>
         <% end %>
       </ul>
