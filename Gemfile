@@ -29,6 +29,9 @@ gem 'carrierwave'
 gem 'bootstrap-sass', '~>3.3.6'
 gem 'jquery-rails'
 gem 'devise'
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+gem 'cancancan'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
