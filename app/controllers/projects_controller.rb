@@ -26,7 +26,7 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
-    @skill = Skill.find(params[:id])
+    @skill = Skill.find(params[:skill_id])
     @project = @skill.projects.new(project_params)
 
     respond_to do |format|
