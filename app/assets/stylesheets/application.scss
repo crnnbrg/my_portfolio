@@ -11,23 +11,23 @@
  * It is generally better to create a new file per style scope.
  *
  */
- @import "bootstrap-sprockets";
- @import "bootstrap";
-
+@import "bootstrap-sprockets";
+@import "bootstrap";
 //body
 * {
   font-family: Lato, Helvetica, sans-serif;
 }
- body {
+
+body {
   padding-top: 70px;
   text-align: center;
- }
- section {
-   overflow-x: hidden;
-   position: relative;
-   padding: 100px 50px;
- }
+}
 
+section {
+  overflow-x: hidden;
+  position: relative;
+  padding: 100px 50px;
+}
 //navbar
 nav {
   height: 60px;
@@ -38,9 +38,6 @@ nav {
   -moz-box-shadow: 0 0 8px 0 #000000;
   box-shadow: 0 0 8px 0 #000000;
 }
-
-
-
 //about
 #about img {
   max-width: 250px;
@@ -49,25 +46,49 @@ nav {
   border-radius: 50%;
   border: 3px solid #EFE7D1;
 }
+
 #about p {
   font-size: 16px;
+  margin-bottom: 30px;
 }
 
+#about span#name {
+  font-weight: 900;
+  color: grey;
+}
 //skills
 #skills li {
   list-style: none;
+  top: 20px;
+  left: 23px;
+  display: block;
+  width: 160px;
+  height: 160px;
+  line-height: 160px;
+  border-radius: 50%;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: 900;
 }
-
 //projects
 #projects li {
   list-style: none;
+  top: 20px;
+  left: 23px;
+  display: block;
+  width: 160px;
+  height: 160px;
+  line-height: 160px;
+  border-radius: 50%;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: 900;
 }
+
 .image {
-height:200px;
-width:400px;
+  height: 200px;
+  width: 400px;
 }
-
-
 // footer {
 //   // position: absolute;
 //   bottom: 0px;
