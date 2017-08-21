@@ -18,14 +18,4 @@
 <p>No comments yet!</p>
 <% end %>
 <br>
-<h4>Add a comment</h4>
-<%= form_for :comment, url: post_comments_path(@post) do |form| %>
-<div class="field">
-  <%= form.label :content %>
-  <%= form.text_area :content, id: :comment_content %>
-</div>
-
-<div class="actions">
-  <%= form.submit %>
-</div>
-<% end %>
+<%= link_to 'Add a comment', new_post_comment_path(@post) %>
