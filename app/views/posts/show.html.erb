@@ -9,8 +9,16 @@
   <strong>Body:</strong>
   <%= @post.body %>
 </p>
+
 <div class="main">
-  <%= render 'post' %>
+  <% if @post.comments.any? %>
+  <h4>Comments</h4>
+
+  <%= render @post.comments %>
+<% else %>
+  <p>No comments yet!</p>
+  <% end %>
 </div>
+
 <br>
 <%= link_to 'Add a comment', new_post_comment_path(@post), id: 'new_link', remote: true %>
