@@ -46,3 +46,18 @@
 </section>
 
 <!-- references section -->
+<section id="recommendations">
+  <div class="container">
+    <div class="row">
+      <h2>Recommendations</h2>
+      <hr>
+      <div class="recs">
+        <%= render "recommendations/recommendation" %>
+      </div>
+    </div>
+
+  </div>
+</section>
+<%= link_to new_recommendation_path, id: 'new_rec', remote: true do %>
+  <button type="button" name="button">Add Recommendation</button>
+<%end%>

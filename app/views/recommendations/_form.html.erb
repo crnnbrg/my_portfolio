@@ -1,0 +1,14 @@
+<%= form_for @recommendation, remote: true do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %><br>
+    <%= form.label :detail %>
+    <%= form.text_area :detail %><br>
+    <%= form.label :rating %>
+    <%= form.number_field :rating, min:4, max:10, required: true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
