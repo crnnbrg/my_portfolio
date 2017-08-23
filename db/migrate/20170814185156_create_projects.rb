@@ -5,7 +5,6 @@ class CreateProjects < ActiveRecord::Migration[5.1]
       t.column :picture, :string
       t.column :link, :string
       t.column :description, :string
-      t.column :skill_id, :integer
 
       t.timestamps
     end
