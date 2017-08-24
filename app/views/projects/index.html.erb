@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Projects</h1>
-<% @projects.each do |project| %>
+<% @skill.projects.each do |project| %>
   <h4><%=  project.name %></h4>
   <%= image_tag project.picture_url.to_s, class: 'image' %>
   <p><%= link_to project.link %></p>
