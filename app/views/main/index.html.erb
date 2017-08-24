@@ -23,8 +23,26 @@
       <hr>
       <ul>
         <% @skills.each do |skill|%>
-        <li><%= link_to skill.name, skill %></li>
-        <% end %>
+        <li>
+        <%= link_to skill.name, skill %>
+      </li>
+        <% if skill.rating.to_i >= 7%>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <% elsif skill.rating.to_i < 7 && skill.rating.to_i >= 4%>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+        <% elsif skill.rating.to_i < 4 %>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <%end%>
+        <%end%>
       </ul>
     </div>
   </div>
