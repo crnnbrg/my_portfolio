@@ -4,12 +4,15 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @skill = Skill.find(params[:skill_id])
+    @project = @skill.projects.all
   end
 
   # GET /projects/1
   # GET /projects/1.json
   def show
+    @project = Project.find(params[:id])
+    @skill = @project.skills.all
   end
 
   # GET /projects/new

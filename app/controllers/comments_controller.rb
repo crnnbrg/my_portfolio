@@ -46,9 +46,12 @@ class CommentsController < ApplicationController
   # PATCH/PUT /comments/1
   # PATCH/PUT /comments/1.json
   def update
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
     respond_to do |format|
       if @comment.update(comment_params)
         format.html { redirect_to @post, notice: 'Comment was successfully updated.' }
+        format.js
         format.json { render :show, status: :ok, location: @comment }
       else
         format.html { render :edit }
@@ -60,9 +63,12 @@ class CommentsController < ApplicationController
   # DELETE /comments/1
   # DELETE /comments/1.json
   def destroy
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
     @comment.destroy
     respond_to do |format|
       format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
+      format.js
       format.json { head :no_content }
     end
   end
