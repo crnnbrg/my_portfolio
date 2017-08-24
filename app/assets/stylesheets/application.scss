@@ -13,14 +13,35 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+h1 , h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+}
 //body
 * {
-  font-family: Lato, Helvetica, sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
 }
 
 body {
   padding-top: 70px;
   text-align: center;
+  background-color: black;
+  height: 100%;
+  margin: 0;
+}
+
+html {
+   height: 100%;
+  margin: 0;
+}
+
+.full-page {
+  min-height: 100%;
 }
 
 section {
@@ -33,29 +54,61 @@ nav {
   height: 60px;
   width: 100%;
   position: fixed;
-  background-color: salmon !important;
+  background-color: black !important;
   -webkit-box-shadow: 0 0 8px 0 #000000;
   -moz-box-shadow: 0 0 8px 0 #000000;
   box-shadow: 0 0 8px 0 #000000;
 }
+
+.navbar-default .navbar-brand {
+    color: #EFE7D1;
+}
+
+.navbar-default:hover .navbar-brand:hover {
+    color: #EFE7D1;
+}
+
+.navbar-brand {
+  font-size: 50px;
+  font-family: 'Kaushan Script', cursive;
+  line-height: 55px;
+  height: 60px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #777;
+    margin-top: 20px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: white;
+    margin-top: 20px;
+}
+
+.navbar {
+  border: none;
+   background-color: transparent !important;
+   background: transparent !important;
+   border-color: transparent !important;
+}
 //about
-#about img {
-  max-width: 250px;
-  width: 50%;
-  height: auto;
-  border-radius: 50%;
-  border: 3px solid #EFE7D1;
-}
+// #about img {
+//   max-width: 250px;
+//   width: 50%;
+//   height: 100%;
+//   border-radius: 50%;
+//   border: 3px solid #EFE7D1;
+// }
 
-#about p {
-  font-size: 16px;
-  margin-bottom: 30px;
-}
+// #about p {
+//   font-size: 16px;
+//   margin-bottom: 30px;
+// }
 
-#about span#name {
-  font-weight: 900;
-  color: grey;
-}
+// #about span#name {
+//   font-weight: 900;
+//   color: grey;
+// }
 //skills
 #skills li {
   list-style: none;
@@ -97,3 +150,69 @@ nav {
 //   text-align: center;
 //   background-color: salmon !important;
 // }
+
+.bio {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-size: 22px;
+}
+
+.me {
+    height: 150px;
+    width: 150px;
+    border: 3px solid white;
+    border-radius: 100%;
+    margin-top: 20px;
+}
+
+#about article {
+  margin-top: 10%;
+}
+
+.grey-hr {
+  height: 2px;
+  width: 100px;
+  background-color: grey;
+}
+
+.welcome {
+  font-size: 50px;
+  color: white;
+}
+
+.see-more-btn {
+  border-radius: 18px;
+  font-weight: 900;
+  padding: 15px 20px;
+  background-color: #D3A180;
+  color: #EFE7D1;
+  border: none;
+}
+
+.see-more-btn:hover {
+  border-radius: 18px;
+  font-weight: 900;
+  padding: 15px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+.see-more-btn:active {
+  border-radius: 18px;
+  font-weight: 900;
+  padding: 15px 20px;
+  background-color: #D3A180;
+  color: #EFE7D1;
+  border: none;
+}
+
+#skills {
+  background-color: #D3A180;
+}
+
+#projects {
+  background-color: #5E5B68;
+}

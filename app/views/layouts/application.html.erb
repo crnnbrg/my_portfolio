@@ -3,7 +3,6 @@
   <head>
     <title>PortfolioRails</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -21,16 +20,16 @@
          <div id="menu-nav" class="navbar-collapse collapse">
            <ul class="nav navbar-nav navbar-right">
              <li>
-               <a class="page-scroll" href="#about">About</a>
+               <a class="page-scroll smoothScroll" href="#about">About</a>
              </li>
              <li>
-               <a class="page-scroll" href="#skills">Skills</a>
+               <a class="page-scroll smoothScroll" href="#skills">Skills</a>
              </li>
              <li>
-               <a class="page-scroll" href="#projects">Projects</a>
+               <a class="page-scroll smoothScroll" href="#projects">Projects</a>
              </li>
              <li>
-               <a class="page-scroll" href="/posts">Blog</a>
+               <a class="page-scroll smoothScroll" href="/posts">Blog</a>
              </li>
              <%if current_user && current_user.user_role %>
              <li>

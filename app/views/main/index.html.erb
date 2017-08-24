@@ -1,63 +1,44 @@
 <!-- about section -->
-<section  id="about">
-  <div class="container">
-    <div class="row">
-      <h2>About Me</h2>
-      <hr>
-      <article>
-        <figure>
-          <img src="https://s-media-cache-ak0.pinimg.com/236x/fa/9c/2a/fa9c2ad66a7fee1a65c9a5b059631fae--black-women-art-black-girls.jpg">
-        </figure>
-        <h3>Hi.</h3>
-        <p>I'm <span id="name">Betty Mutai</span>, a web developer / designer based in Nairobi, Kenya. I have a Bachelors degree in Computer Science and i love to create web technologies.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
+<div class="container full-page" id="about">
+  <article>
+  <h1 class="welcome">WELCOME ON MY SIDE OF WEB</h1>
+  <hr class="grey-hr">
+    <p class="bio">I'm <span id="name">Betty Mutai</span>, a web developer / designer based in Nairobi, Kenya. I have a Bachelors degree in Computer Science and i love to create web technologies.</p>
+    <br>
+    <a href="#skills" class="btn btn-default smoothScroll see-more-btn">SEE MORE</a>
+  </article>
+</div>
 <!-- skills section -->
-<section id="skills">
-  <div class="container">
+  <div class="full-page" id="skills">
     <div class="row">
-      <h2>Skills</h2>
-      <hr>
-      <ul>
+      <h2>SKILLS</h2>
         <% @skills.each do |skill|%>
         <li><%= link_to skill.name, skill %></li>
         <% end %>
-      </ul>
     </div>
   </div>
-</section>
-
 <!-- projects section -->
-<section id="projects">
-  <div class="container">
+  <div class="full-page" id="projects">
     <div class="row">
-      <h2>Projects</h2>
-      <hr>
-      <ul>
+      <h2>PROJECTS</h2>
         <% @projects.each do |project| %>
         <li><%= link_to project.name, project_path(project) %></li>
         <% end %>
-      </ul>
     </div>
   </div>
-</section>
-
 <!-- references section -->
-<section id="recommendations">
+<section id="recommendations" class="full-pag">
   <div class="container">
     <div class="row">
-      <h2>Recommendations</h2>
-      <hr>
+      <h2>RECOMMENDATIONS</h2>
       <div class="recs">
         <%= render "recommendations/recommendation" %>
       </div>
     </div>
-
   </div>
 </section>
+<div class="container">
 <%= link_to new_recommendation_path, id: 'new_rec', remote: true do %>
-  <button type="button" name="button">Add Recommendation</button>
+<button type="button" class="btn btn-default" name="button">Add Recommendation</button>
 <%end%>
+</div>
