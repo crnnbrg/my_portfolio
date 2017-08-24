@@ -46,9 +46,12 @@ class CommentsController < ApplicationController
   # PATCH/PUT /comments/1
   # PATCH/PUT /comments/1.json
   def update
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
     respond_to do |format|
       if @comment.update(comment_params)
         format.html { redirect_to @post, notice: 'Comment was successfully updated.' }
+        format.js
         format.json { render :show, status: :ok, location: @comment }
       else
         format.html { render :edit }

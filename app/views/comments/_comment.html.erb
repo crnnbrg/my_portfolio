@@ -1,4 +1,9 @@
 <p>
 <%= comment.content %>
+<%= comment.user.email%>
+<%if comment.user == current_user%>
 <%= link_to '(remove)', [comment.post, comment] , method: :delete, data: {confirm: 'Are you sure'}, remote: true, class: 'del_comment' %>
+<%else%>
+<h1>kdajkkadshj</h1>
+<%end%>
 </p>
