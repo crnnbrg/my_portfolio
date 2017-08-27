@@ -12,9 +12,8 @@
   <div class="full-page" id="skills">
     <div class="row">
       <h2>SKILLS</h2>
-        <% @skills.each do |skill|%>
+        <%= @skills.each do |skill|%>
         <li><%= link_to skill.name, skill %></li>
-        <% end %>
         <li>
         <%= link_to skill.name, skill %>
       </li>
@@ -33,7 +32,7 @@
         <i class="fa fa-star" aria-hidden="true"></i>
         <i class="fa fa-star" aria-hidden="true"></i>
         <i class="fa fa-star" aria-hidden="true"></i>
-        <%end%>
+        <% end %>
         <%end%>
       </ul>
     </div>
