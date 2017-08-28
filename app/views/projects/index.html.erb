@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="white-text">
 <h1>Projects</h1>
 <% @skill.projects.each do |project| %>
   <h4><%=  project.name %></h4>
@@ -7,3 +7,4 @@
   <p><%= link_to project.link %></p>
   <p><%= project.description %></p>
 <% end %>
+</div>

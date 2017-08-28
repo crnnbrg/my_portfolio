@@ -2,7 +2,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<div class="container">
+<div class="container white-text">
   <h4><%= @project.name %></h4>
     <%= image_tag @project.picture_url.to_s, class:"image" %>
   <p><%= link_to @project.link %></p>
@@ -10,7 +10,7 @@
 </div>
 </div>
 
-<h2>Skills Used</h2>
+<h2 class="white-text">Skills Used</h2>
 <div class="skills_projects">
   <div class="conatiner">
     <% @project.skills.each do |skill| %>

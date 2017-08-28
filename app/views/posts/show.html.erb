@@ -4,10 +4,10 @@
 		<h1 class="white-text">
 		<%= @post.title %>
 		</h1>
-		<p class="post-body">
+		<p class="white-text">
 			<%= @post.body %>
 		</p>
-		<h3>Comments:</h3>
+		<h3 class="white-text">Comments:</h3>
 		<div class="main">
 			<% if @post.comments.any? %>
 				<%= render @post.comments %>

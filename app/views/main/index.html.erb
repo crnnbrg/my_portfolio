@@ -66,7 +66,11 @@
       </div>
     </div>
     <div class="container margin-bottom rec">
+      <% if current_user && current_user.user_role? %>
       <%= link_to new_recommendation_path, id: 'new_rec', remote: true do %>
       <button type="button" class="theme-btn" name="button"><span class="glyphicon glyphicon-plus"></span> Recommendation</button>
       <%end%>
+      <% else %>
+      <p class="white-text"><%= link_to "Log In", new_user_session_path %>/<%= link_to "Sign Up", new_user_registration_path %> to add a recommendation.</p>
+      <% end %>
     </div>
