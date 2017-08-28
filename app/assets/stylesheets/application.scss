@@ -56,9 +56,9 @@ nav {
   width: 100%;
   position: fixed;
   background-color: black !important;
-  -webkit-box-shadow: 0 0 8px 0 #000000;
-  -moz-box-shadow: 0 0 8px 0 #000000;
-  box-shadow: 0 0 8px 0 #000000;
+  // -webkit-box-shadow: 0 0 8px 0 #000000;
+  // -moz-box-shadow: 0 0 8px 0 #000000;
+  // box-shadow: 0 0 8px 0 #000000;
 }
 
 .navbar-default .navbar-brand {
@@ -111,19 +111,7 @@ nav {
 //   color: grey;
 // }
 //skills
-#skills li {
-  list-style: none;
-  top: 20px;
-  left: 23px;
-  display: block;
-  width: 160px;
-  height: 160px;
-  line-height: 160px;
-  border-radius: 50%;
-  margin: 0 auto;
-  font-size: 24px;
-  font-weight: 900;
-}
+
 //projects
 #projects li {
   list-style: none;
@@ -178,6 +166,12 @@ nav {
   background-color: grey;
 }
 
+.grey {
+  height: 3px;
+  width: 70px;
+  background-color: white;
+}
+
 .welcome {
   font-size: 50px;
   color: white;
@@ -216,4 +210,71 @@ nav {
 
 #projects {
   background-color: #5E5B68;
+}
+
+.margin-bottom {
+  margin-bottom: 2%;
+}
+
+.white-text {
+  color: white;
+}
+
+.left {
+  float: left;
+}
+
+.margin-top {
+  margin-top: 15%;
+}
+
+.post-container {
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.58;
+  font-weight: 400;
+  font-size: 21px;
+  letter-spacing: -.003em;
+  font-family: times;
+}
+
+.well {
+  border-radius: 0px;
+  // background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 1.5px;
+}
+
+.left {
+  float: left
+}
+
+.skills-h2 {
+    text-transform: uppercase;
+    font-size: 50px;
+    // padding: 0 20px;
+    // margin-top: -5%;
+}
+
+.margin-top-5 {
+  margin-top: 8%;
+}
+
+#skills li {
+  list-style: none;
+  // top: 20px;
+  // left: 23px;
+  font-size: 24px;
+}
+
+.skill-ul a {
+  color: black;
+  font-weight: bolder;
+}
+
+.skill-ul a:hover {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
 }

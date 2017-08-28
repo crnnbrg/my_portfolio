@@ -11,12 +11,12 @@
 <!-- skills section -->
   <div class="full-page" id="skills">
     <div class="row">
-      <h2>SKILLS</h2>
-        <%= @skills.each do |skill|%>
-        <li><%= link_to skill.name, skill %></li>
-        <li>
-        <%= link_to skill.name, skill %>
-      </li>
+      <h2 class="margin-top-5 skills-h2 white-text">SKILLS STACK</h2>
+      <hr class="grey">
+        <% @skills.each do |skill|%>
+        <br>
+        <ul class="skill-ul">
+          <li class="skill-li"><%= link_to skill.name, skill %>
         <% if skill.rating.to_i >= 7%>
         <i class="fa fa-star" aria-hidden="true"></i>
         <i class="fa fa-star" aria-hidden="true"></i>
@@ -34,7 +34,8 @@
         <i class="fa fa-star" aria-hidden="true"></i>
         <% end %>
         <%end%>
-      </ul>
+        </li>
+        </ul>
     </div>
   </div>
 <!-- projects section -->
@@ -47,18 +48,16 @@
     </div>
   </div>
 <!-- references section -->
-<section id="recommendations" class="full-pag">
-  <div class="container">
-    <div class="row">
-      <h2>RECOMMENDATIONS</h2>
+  <div id="recommendations" class="full-page">
+    <div class="container">
+      <h2 class="white-text margin-top">RECOMMENDATIONS</h2>
       <div class="recs">
         <%= render "recommendations/recommendation" %>
       </div>
     </div>
   </div>
-</section>
-<div class="container">
+<div class="container margin-bottom">
 <%= link_to new_recommendation_path, id: 'new_rec', remote: true do %>
-<button type="button" class="btn btn-default" name="button">Add Recommendation</button>
+<button type="button" class="btn btn-info" name="button"><span class="glyphicon glyphicon-plus"></span> Recommendation</button>
 <%end%>
 </div>
