@@ -1,22 +1,22 @@
 <!-- about section -->
 <div class="container full-page" id="about">
   <article>
-  <h1 class="welcome">WELCOME ON MY SIDE OF WEB</h1>
-  <hr class="grey-hr">
+    <h1 class="welcome">WELCOME ON MY SIDE OF WEB</h1>
+    <hr class="grey-hr">
     <p class="bio">I'm Betty Mutai, a web developer / designer based in Nairobi, Kenya. I have a Bachelors degree in Computer Science and i love to create web technologies.</p>
     <br>
     <a href="#skills" class="btn btn-default smoothScroll see-more-btn">SEE MORE</a>
   </article>
 </div>
 <!-- skills section -->
-  <div class="full-page" id="skills">
-    <div class="row">
-      <h2 class="margin-top-5 skills-h2 white-text">SKILLS STACK</h2>
-      <hr class="grey">
-        <% @skills.each do |skill|%>
-        <br>
-        <ul class="skill-ul">
-          <li class="skill-li animated flash"><%= link_to skill.name, skill %>
+<div class="full-page" id="skills">
+  <div class="row">
+    <h2 class="margin-top-5 skills-h2 white-text">SKILLS STACK</h2>
+    <hr class="grey">
+    <% @skills.each do |skill|%>
+    <br>
+    <ul class="skill-ul">
+      <li class="skill-li animated flash"><%= link_to skill.name, skill %>
         <% if skill.rating.to_i >= 7%>
         <i class="fa fa-star" aria-hidden="true"></i>
         <i class="fa fa-star" aria-hidden="true"></i>
@@ -34,30 +34,39 @@
         <i class="fa fa-star" aria-hidden="true"></i>
         <% end %>
         <%end%>
-        </li>
-        </ul>
-    </div>
+      </li>
+    </ul>
   </div>
+</div>
 <!-- projects section -->
-  <div class="full-page" id="projects">
-    <div class="row">
-      <h2 class="h margin-top-5">PROJECTS</h2>
-        <% @projects.each do |project| %>
-        <li><%= link_to project.name, project_path(project) %></li>
-        <% end %>
-    </div>
-  </div>
-<!-- references section -->
-  <div id="recommendations" class="full-page">
+<div class="full-page" id="projects">
+  <div class="row">
+    <h2 class="h margin-top-5">PROJECTS</h2>
+     <hr class="grey">
+    <br>
     <div class="container">
-      <h2 class="white-text margin-top-5 h">RECOMMENDATIONS</h2><br>
-      <div class="recs">
-        <%= render "recommendations/recommendation" %>
+    <% @projects.each do |project| %>
+    <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src="<%= project.picture %>" alt="<%= project.name %>">
+      <div class="card-body">
+        <h4 class="card-title"><%= link_to project.name, project_path(project) %></h4>
       </div>
     </div>
-  </div>
-<div class="container margin-bottom">
-<%= link_to new_recommendation_path, id: 'new_rec', remote: true do %>
-<button type="button" class="theme-btn" name="button"><span class="glyphicon glyphicon-plus"></span> Recommendation</button>
-<%end%>
-</div>
+    <% end %>
+    </div>
+    </div>
+    </div>
+    <!-- references section -->
+    <div id="recommendations" class="full-page">
+      <div class="container">
+        <h2 class="white-text margin-top-5 h">RECOMMENDATIONS</h2><br>
+        <div class="recs">
+          <%= render "recommendations/recommendation" %>
+        </div>
+      </div>
+    </div>
+    <div class="container margin-bottom rec">
+      <%= link_to new_recommendation_path, id: 'new_rec', remote: true do %>
+      <button type="button" class="theme-btn" name="button"><span class="glyphicon glyphicon-plus"></span> Recommendation</button>
+      <%end%>
+    </div>
