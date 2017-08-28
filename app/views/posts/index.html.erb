@@ -1,6 +1,12 @@
+<div class="container">
 <p id="notice"><%= notice %></p>
 <h1>Welcome to my Blog :)</h1>
 
 <% @posts.each do |post| %>
-<%= link_to post.title, post %>
+<div class="well post-well">
+<h4><%= link_to post.title, post,  class:'post-title-a' %></h4>
+<%= truncate(post.body, length: 350)  %>
+<%= link_to 'Read more', post %>
+</div>
 <% end %>
+</div>
