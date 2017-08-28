@@ -1,8 +1,8 @@
-$('#main-nav').affix({
-    offset: {
-        top: $('#main-nav').offset().top
-    }
-});
+// $('#main-nav').affix({
+//     offset: {
+//         top: $('#main-nav').offset().top
+//     }
+// });
 
 // if((window.scrollY > 100) && (window.innerWidth >= 878)) {
   //   $('nav').css({backgroundColor: '#5E5B68 !important'});
