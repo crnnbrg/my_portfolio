@@ -41,7 +41,7 @@
 <!-- projects section -->
   <div class="full-page" id="projects">
     <div class="row">
-      <h2>PROJECTS</h2>
+      <h2 class="h margin-top-5">PROJECTS</h2>
         <% @projects.each do |project| %>
         <li><%= link_to project.name, project_path(project) %></li>
         <% end %>
@@ -50,7 +50,7 @@
 <!-- references section -->
   <div id="recommendations" class="full-page">
     <div class="container">
-      <h2 class="white-text margin-top">RECOMMENDATIONS</h2>
+      <h2 class="white-text margin-top-5 h">RECOMMENDATIONS</h2>
       <div class="recs">
         <%= render "recommendations/recommendation" %>
       </div>
