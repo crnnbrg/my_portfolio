@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   resources :skills do
     resources :projects
   end
-  
+
     resources :recommendations
   resources :projects
+  get 'github', to: 'projects#github_repos'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

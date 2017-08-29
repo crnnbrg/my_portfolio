@@ -33,6 +33,7 @@ gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 gem 'cancancan'
 gem 'font-awesome-rails'
+gem "github_api"
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

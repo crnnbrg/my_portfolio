@@ -67,6 +67,10 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def github_repos
+    @github_repos = Github.repos.list user: 'BettyMutai'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project

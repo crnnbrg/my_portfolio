@@ -1,0 +1,6 @@
+<div class="container" id="github">
+  <h3>All Github Repos</h3>
+  <% @github_repos.each do |repo| %>
+  <li><%= link_to repo.name, repo.clone_url, target: '_blank' %>: <%= repo.language %></li>
+  <% end %>
+</div>
