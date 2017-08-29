@@ -12,9 +12,9 @@
 
 <h2 class="white-text">Skills Used</h2>
 <div class="skills_projects">
-  <div class="conatiner">
+  <div class="container">
     <% @project.skills.each do |skill| %>
-    <% skill.name %>
+      <p class="white-text"><%= skill.name %></p>
     <% end %>
   </div>
 
