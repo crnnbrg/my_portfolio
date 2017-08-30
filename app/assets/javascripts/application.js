@@ -24,30 +24,30 @@ $('#main-nav').affix({
 });
 
 // if((window.scrollY > 100) && (window.innerWidth >= 878)) {
-  //   $('nav').css({backgroundColor: '#5E5B68 !important'});
-  //   $('.navbar').css({border: '1px solid transparent'});
-  //   $('.navbar-nav').css({margin: '0 -15px'});
-  //   $('.navbar-header a.navbar-brand').css({padding: '0', fontSize: '50px'});
-  //   $('#menu-nav a.page-scroll').css({fontSize: '18px', opacity: '1'});
-  //   $('#menu-nav a.page-scroll').mouseover(function() {
-  //     $(this).css({backgroundColor: '#EFE7D1', color: '#5E5B68'});
-  //   });
-  //   $('#menu-nav a.page-scroll').mouseout(function() {
-  //     $(this).css({backgroundColor: 'transparent', color: '#EFE7D1'});
-  //   });
-  // } else {
-  //   $('nav').css({backgroundColor: 'transparent !important'});
-  //   $('.navbar').css({border: 'none'});
-  //   $('.navbar-nav').css({margin: '20px 20px 0 0'});
-  //   $('.navbar-header a.navbar-brand').css({padding: '20px 0 0 20px', fontSize: '70px'});
-  //   $('#menu-nav a.page-scroll').css({fontSize: '20px', opacity: '0.7'});
-  //   $('#menu-nav a.page-scroll').mouseover(function() {
-  //     $(this).css({backgroundColor: 'transparent', color: '#EFE7D1'});
-  //   });
-  //   $('#menu-nav a.page-scroll').mouseout(function() {
-  //     $(this).css({backgroundColor: '#EFE7D1', color: '#5E5B68'});
-  //   });
-  // };
+//     $('nav').css({backgroundColor: '#5E5B68 !important'});
+//     $('.navbar').css({border: '1px solid transparent'});
+//     $('.navbar-nav').css({margin: '0 -15px'});
+//     $('.navbar-header a.navbar-brand').css({padding: '0', fontSize: '50px'});
+//     $('#menu-nav a.page-scroll').css({fontSize: '18px', opacity: '1'});
+//     $('#menu-nav a.page-scroll').mouseover(function() {
+//       $(this).css({backgroundColor: '#EFE7D1', color: '#5E5B68'});
+//     });
+//     $('#menu-nav a.page-scroll').mouseout(function() {
+//       $(this).css({backgroundColor: 'transparent', color: '#EFE7D1'});
+//     });
+//   } else {
+//     $('nav').css({backgroundColor: 'transparent !important'});
+//     $('.navbar').css({border: 'none'});
+//     $('.navbar-nav').css({margin: '20px 20px 0 0'});
+//     $('.navbar-header a.navbar-brand').css({padding: '20px 0 0 20px', fontSize: '70px'});
+//     $('#menu-nav a.page-scroll').css({fontSize: '20px', opacity: '0.7'});
+//     $('#menu-nav a.page-scroll').mouseover(function() {
+//       $(this).css({backgroundColor: 'transparent', color: '#EFE7D1'});
+//     });
+//     $('#menu-nav a.page-scroll').mouseout(function() {
+//       $(this).css({backgroundColor: '#EFE7D1', color: '#5E5B68'});
+//     });
+//   };
 
 document.addEventListener('click', function() {
   if($('button').hasClass('collapsed') === false) {

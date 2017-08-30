@@ -9,10 +9,10 @@
 		</p>
 		<h3 class="white-text">Comments:</h3>
 		<div class="main">
-			<% if @post.comments.any? %>
-				<%= render @post.comments %>
-			<% else %>
+			<% if @post.comments.nil? %>
 			<p>No comments yet!</p>
+			<% else %>
+			<%= render @post.comments %>
 			<% end %>
 		</div>
 		<br>
