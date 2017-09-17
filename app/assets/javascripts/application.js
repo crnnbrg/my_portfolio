@@ -17,7 +17,7 @@
 //= require_tree .
 //= require bootstrap-sprockets
 
-$('#main-nav').affix({
+var top = $('#main-nav').affix({
     offset: {
         top: $('#main-nav').offset().top
     }
