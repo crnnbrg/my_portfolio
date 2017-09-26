@@ -15,12 +15,12 @@
 </div>
 <!-- skills section -->
 <div class="full-page" id="skills">
-  <div class="row">
+  <div class="row" style="text-align: center">
     <h2 class="margin-top-5 skills-h2 white-text">SKILLS STACK</h2>
     <hr class="grey">
+    <ul class="skill-ul">
     <% @skills.each do |skill|%>
     <br>
-    <ul class="skill-ul">
       <li class="skill-li animated flash"><%= link_to skill.name, skill %>
         <% if skill.rating.to_i >= 7%>
         <i class="fa fa-star" aria-hidden="true"></i>
