@@ -3,10 +3,11 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container white-text">
-  <h4><%= @project.name %></h4>
+    <a href="<%=@project.link%>" target="_blank">
+      <h4><%= @project.name %></h4>
+    </a>
     <%= image_tag @project.picture_url.to_s, class:"image" %>
-  <p><%= link_to @project.link %></p>
-  <p><%= @project.description %></p>
+    <p><%= @project.description %></p>
 </div>
 </div>
 
