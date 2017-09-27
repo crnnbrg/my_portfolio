@@ -13,9 +13,11 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "navbar";
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+
 
 h1 , h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
@@ -50,48 +52,7 @@ section {
   position: relative;
   padding: 100px 50px;
 }
-//navbar
-nav {
-  height: 60px;
-  width: 100%;
-  position: fixed;
-  background-color: black !important;
-  // -webkit-box-shadow: 0 0 8px 0 #000000;
-  // -moz-box-shadow: 0 0 8px 0 #000000;
-  // box-shadow: 0 0 8px 0 #000000;
-}
 
-.navbar-default .navbar-brand {
-    color: #EFE7D1;
-}
-
-.navbar-default:hover .navbar-brand:hover {
-    color: #EFE7D1;
-}
-
-.navbar-brand {
-  font-size: 50px;
-  font-family: 'Kaushan Script', cursive;
-  line-height: 55px;
-  height: 60px;
-}
-
-.navbar-default .navbar-nav > li > a {
-    color: #777;
-    margin-top: 20px;
-}
-
-.navbar-default .navbar-nav > li > a:hover {
-    color: white;
-    margin-top: 20px;
-}
-
-.navbar {
-  border: none;
-   background-color: transparent !important;
-   background: transparent !important;
-   border-color: transparent !important;
-}
 //about
 // #about img {
 //   max-width: 250px;
@@ -177,34 +138,6 @@ nav {
   font-size: 50px;
   color: white;
 }
-
-.see-more-btn {
-  border-radius: 18px;
-  font-weight: 900;
-  padding: 15px 20px;
-  background-color: #D3A180;
-  color: #EFE7D1;
-  border: none;
-}
-
-.see-more-btn:hover {
-  border-radius: 18px;
-  font-weight: 900;
-  padding: 15px 20px;
-  background-color: white;
-  color: black;
-  border: none;
-}
-
-.see-more-btn:active {
-  border-radius: 18px;
-  font-weight: 900;
-  padding: 15px 20px;
-  background-color: #D3A180;
-  color: #EFE7D1;
-  border: none;
-}
-
 
 #skills {
   background-color: #D3A180;
@@ -384,4 +317,7 @@ nav {
     color: #FFA07A;
   }
   color: white
+}
+label {
+  color: white;
 }

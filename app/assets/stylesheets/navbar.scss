@@ -1,0 +1,123 @@
+// body variables
+$bg-color: white;
+// end body variables
+
+// navbar variables
+$navbar-color: black;
+$brand-color: #EFE7D1 !important;
+$brand-font-size: 28px;
+$brand-color-hover: orange;
+
+$iconbar-color: royalblue;
+$iconbar-color-hover: royalblue !important;
+$iconbar-color-focus: royalblue;
+$iconbar-height: 4px;
+
+$navbar-element-color: white;
+$navbar-element-color-hover: #D3A180;
+
+%nav-transition {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+// end navbar variables
+
+// body
+body {
+  background-color: $bg-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+// end body
+
+// navbar
+.navbar {
+  border: none;
+  margin-bottom: 0;
+  z-index: 9999;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: $navbar-color;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.14);
+  @extend %nav-transition;
+  .navbar-brand {
+    color: $brand-color;
+    font-size: $brand-font-size;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 700;
+    @extend %nav-transition;
+  }
+  li {
+    margin-right: 10px;
+    a {
+      color: $navbar-element-color !important;
+      font-size: 18px;
+      @extend %nav-transition;
+    }
+  }
+}
+
+.navbar-nav {
+  li {
+    a {
+      &:hover {
+        color: $navbar-element-color-hover !important;
+      }
+    }
+    &.active {
+      a {
+        background-color: white !important;
+        color: $navbar-element-color-hover !important;
+      }
+    }
+  }
+}
+
+.navbar-inverse {
+  .navbar-toggle {
+    border: none;
+    &:hover {
+      background-color: transparent;
+      .icon-bar {
+        background-color: $iconbar-color-hover;
+      }
+    }
+    &:focus {
+      background-color: transparent;
+      .icon-bar {
+        background-color: $iconbar-color-focus;
+      }
+    }
+    .icon-bar {
+      background-color: $iconbar-color;
+      height: $iconbar-height;
+      @extend %nav-transition;
+    }
+  }
+}
+
+.transparent {
+  background-color: transparent;
+  box-shadow: none;
+  .navbar-brand {
+    color: #EFE7D1 !important;
+    font-size: 50px;
+    font-family: 'Kaushan Script', cursive;
+    line-height: 55px;
+    height: 60px;
+  }
+  li {
+    a {
+      color: white !important;
+    }
+  }
+  .navbar-toggle {
+    .icon-bar {
+      background-color: white !important;
+    }
+  }
+}
+// end navbar
