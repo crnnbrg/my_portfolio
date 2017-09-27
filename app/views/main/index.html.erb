@@ -1,3 +1,8 @@
+
+<div id="particles-js" class="jumbotron text-center">
+  <h1>Betty Mutai</h1>
+  <p><b>Software Engineer</b></p>
+</div>
 <!-- about section -->
 <div class="container full-page" id="about">
   <article>
@@ -63,22 +68,14 @@
       <%= link_to "Github Repos", github_path %>
     </div> -->
     </div>
-    </div>
-    <!-- references section -->
-    <div id="recommendations" class="full-page">
-      <div class="container">
-        <h2 class="white-text margin-top-5 h">RECOMMENDATIONS</h2><br>
-        <div class="recs">
-          <%= render "recommendations/recommendation" %>
-        </div>
-      </div>
-    </div>
-    <div class="container margin-bottom rec">
-      <% if current_user && current_user.user_role? %>
-      <%= link_to new_recommendation_path, id: 'new_rec', remote: true do %>
-      <button type="button" class="theme-btn" name="button"><span class="glyphicon glyphicon-plus"></span> Recommendation</button>
-      <%end%>
-      <% else %>
-      <p class="white-text"><%= link_to "Log In", new_user_session_path %>/<%= link_to "Sign Up", new_user_registration_path %> to add a recommendation.</p>
-      <% end %>
-    </div>
+  </div>
+
+    <!-- contact -->
+    <h2 class="h margin-top-5">CONTACTS</h2>
+    <hr class="grey">
+    <div class="content" style="margin-top: 100px;">
+       <a href="mailto:bettymutai00@gmail.com"><i class="svg email"></i></a>
+       <a href="https://facebook.com/hein.moelwin" target="_blank"><i class="svg facebook"></i></a>
+       <a href="https://github.com/BettyMutai" target="_blank"><i class="svg github"></i></a>
+       <a href="https://www.linkedin.com/in/betty-mutai-780369a1/" target="_blank"><i class="svg linkedin"></i></a>
+     </div>
